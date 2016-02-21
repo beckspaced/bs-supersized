@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Beckspaced Supersized\n"
+"POT-Creation-Date: 2015-04-30 11:28+0100\n"
+"PO-Revision-Date: 2015-04-30 11:41+0100\n"
+"Last-Translator: Becki Beckmann <becki@beckspaced.com>\n"
+"Language-Team: Becki Beckmann <becki@beckspaced.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/admin.php:52
+msgid "Media Library"
+msgstr "Mediathek"
+
+#: admin/admin.php:62
+msgid "Media Library Settings"
+msgstr "Mediathek Einstellungen"
+
+#: admin/admin.php:69
+msgid "Media Library Enabled"
+msgstr "Mediathek aktiviert"
+
+#: admin/admin.php:77
+msgid "Media Library Pattern"
+msgstr "Mediathek Suchmuster"
+
+#: admin/admin.php:87
+msgid ""
+"You can also use pictures from your media library as fullscreen background."
+msgstr ""
+"Sie können auch Bilder aus der Mediathek als Vollbild-Hintergrund benutzen."
+
+#: admin/admin.php:88
+msgid ""
+"Just make sure to the picture resolution is a minimum size of <strong>2048 "
+"pixel</strong>."
+msgstr ""
+"Achten Sie bitte darauf, dass das Bild eine minimale Auflösung von "
+"<strong>2048 pixel</strong> Breite / Höhe besitzt."
+
+#: admin/admin.php:89
+msgid ""
+"The picture file name MUST matches the '<strong>Media Library Pattern</"
+"strong>' ->  '<strong>supersized</strong>'."
+msgstr ""
+"Der Bild-Dateiname muss mit den '<strong>Mediathek Suchmuster</strong>' -> "
+"'<strong>supersized</strong>' übereinstimmen."
+
+#: admin/admin.php:90
+msgid ""
+"Meaning the word '<strong>supersized</strong>' must be part of your picture "
+"file name. See the following examples:"
+msgstr ""
+"Das bedeutet, das Wort '<strong>supersized</strong>' muss Teil des Bild-"
+"Dateinamens sein. Siehe folgende Beispiele:"
+
+#: admin/admin.php:92
+msgid "supersized-image-01.jpg"
+msgstr "supersized-bild-01.jpg"
+
+#: admin/admin.php:93
+msgid "image-supersized.jpg"
+msgstr "bild-supersized.jpg"
+
+#: admin/admin.php:95
+msgid "Please select your Media Library settings below:"
+msgstr "Wählen Sie bitte Ihre Medithek Einstellungen aus:"
+
+#: admin/admin.php:104
+msgid "Yes, enable media library"
+msgstr "Ja, Mediathek aktivieren"
+
+#: admin/admin.php:107
+msgid "No, disable media library"
+msgstr "Nein, Mediathek ausschalten"
+
+#: admin/admin.php:135
+msgid ""
+"Media library pattern can only be alphanumeric characters in range of [a-zA-"
+"Z]."
+msgstr ""
+"Mediathek Suchmuster kann nur alphanumerische Zeichen enthalten [a-zA-Z]."
+
+#: admin/admin.php:139
+msgid "Please fill in a media library pattern string!"
+msgstr "Bitte geben Sie ein Mediathek Suchmuster ein!"
+
+#: admin/admin.php:154
+msgid "Gallery"
+msgstr "Galerie"
+
+#: admin/admin.php:164
+msgid "NGG Gallery Settings"
+msgstr "NGG Gallery Einstellungen"
+
+#: admin/admin.php:171
+msgid "NGG Gallery Enabled"
+msgstr "NGG Gallery aktiviert"
+
+#: admin/admin.php:179
+msgid "NGG Gallery ID"
+msgstr "NGG Galerie ID"
+
+#: admin/admin.php:207
+msgid "NGG Gallery ID can only be digit / number in range of [0-9]."
+msgstr "NGG Galerie ID kann nur eine Zahl sein [0-9]."
+
+#: admin/admin.php:211
+msgid "Please fill in a NGG Gallery ID!"
+msgstr "Bitte geben Sie eine NGG Galerie ID an!"
+
+#: admin/admin.php:226
+msgid "Enter NGG gallery settings below:"
+msgstr "Bitte NGG Galerie Einstellungen eingeben:"
+
+#: admin/admin.php:239
+msgid "Yes, enable gallery"
+msgstr "Ja, aktiviere Galerie"
+
+#: admin/admin.php:242
+msgid "No, disable gallery"
+msgstr "Nein, Galerie auschalten"
+
+#: admin/admin.php:248
+msgid "Directory"
+msgstr "Verzeichniss"
+
+#: admin/admin.php:258
+msgid "Directory Settings"
+msgstr "Verzeichniss Einstellungen"
+
+#: admin/admin.php:265
+msgid "Directory Enabled"
+msgstr "Verzeichniss aktiviert"
+
+#: admin/admin.php:273
+msgid "Directory Path"
+msgstr "Verzeichniss Pfad"
+
+#: admin/admin.php:296
+msgid "Please fill in a directory path!"
+msgstr "Bitte geben Sie einen Verzeichnisspfad an!"
+
+#: admin/admin.php:311
+msgid "Enter Directory Path below:"
+msgstr "Bitte Verzeichnisspfad eingeben:"
+
+#: admin/admin.php:331
+msgid "Yes, enable directory"
+msgstr "Ja, Verzeichnisspfad aktivieren"
+
+#: admin/admin.php:334
+msgid "No, disable directory"
+msgstr "Nein, Verzeichnisspfad ausschalten"
+
+#: admin/admin.php:341
+msgid "Supersized Settings"
+msgstr "Supersized Einstellungen"
+
+#: lib/core.php:125
+#, php-format
+msgid ""
+"Error - No pictures found in NGG gallery with ID %d please select a "
+"different gallery!"
+msgstr ""
+"Fehler - Es wurden keine Bilder in der NGG Bildergalerie mit der ID %d "
+"gefunden! Bitte wähle eine andere Bildergalerie!"
+
+#: lib/core.php:131
+#, php-format
+msgid ""
+"Error - No pictures found in directory with path %s please check your "
+"directory path!"
+msgstr ""
+"Felher - Es wurden keine Bilder im Verzeichnisspfad %s gefunden, bitte "
+"überprüfen Sie den Verzeichnisspfad!"
+
+#: lib/core.php:137
+#, php-format
+msgid ""
+"Error - No pictures found in media library with pattern %s please check your "
+"media library picture upload!"
+msgstr ""
+"Fehler - Es wurden keine Bilder in der Mediathek mit dem Suchmuster %s "
+"gefunden, bitte überprüfen Sie Ihre Bildernamen in der Mediathek!"
+
+#: lib/core.php:143
+msgid "wp_enqueue_scripts for css and js has been skipped!"
+msgstr "wp_enqueue_scripts für css und js wurde übersprungen!"
+
+#: uninstall.php:8
+msgid "Sorry, you are not allowed to access this file directly."
+msgstr ""
+"Entschuldigung, Sie haben keine Erlaubniss auf diese Datei direkt "
+"zuzugreifen."
+
+#~ msgid "Gallery Settings"
+#~ msgstr "Galerie Einstellungen"
