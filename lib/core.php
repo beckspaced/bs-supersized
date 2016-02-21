@@ -191,36 +191,54 @@ class bsSupersizedCore {
 	}
 	
 	public function getImagesNggGallery($nggGalleryID) {
-		
-		if ( method_exists( 'nggdb', 'get_gallery' ) ) { // if NextGen is installed and the function get_gallery exists
-			
-			$full_output = '';
-		
-			$imagesList = nggdb::get_gallery($nggGalleryID, 'sortorder', 'ASC'); // calls the NextGen Gallery function to retrieve the content of the NextGen gallery with ID $nggGallery_ID. Images are sorted in ascending order of Sort Order.
-		
-			if ( $imagesList ) { // if there are images in the gallery
-							
-				foreach( $imagesList as $image ) {
-
-					$ngggallery_url   = $image->imageURL; // full link to the full size image
-					//$ngggallery_thumburl = $image->thumbURL; // full link to the thumbnail
-					$ngggallery_title = $image->alttext; // image title
-					$ngggallery_caption = $image->description; // image caption
-		
-					if ( $ngggallery_caption == '' ) $ngggallery_caption = $ngggallery_title; // if there is no caption, use title instead
-		
-					$full_output = $full_output . "\n{image : '" . $ngggallery_url . "', title : '".$ngggallery_caption."'},";
-				}
-		
-				$full_output = substr( $full_output, 0, -1 )."\n"; // removes the trailing comma to avoid trouble in IE
-				return $full_output;
-		
-			}
-			else
-			{
-				return false;
-			}
-		}
+	    
+	    global $wpdb;
+	     
+	    $wpdb->nggpictures					= $wpdb->prefix . 'ngg_pictures';
+	    $wpdb->nggallery					= $wpdb->prefix . 'ngg_gallery';
+	    $wpdb->nggalbum						= $wpdb->prefix . 'ngg_album';
+	     
+	    $where = ' ';
+	    $where = " WHERE gid IN (" . $nggGalleryID . ")";
+	    $order = 'gid ASC';
+	     
+	    // lets check if we find some pics in the gallery
+	     
+	    if ( $wpdb->get_var("SELECT COUNT(pid) FROM {$wpdb->nggpictures} WHERE galleryid = '" . $nggGalleryID . "'") > 0 ) {
+	         
+	        // yes, pics are available
+	         
+	        // lets get the gallery info so we have the path for image url
+	        $where = ' ';
+	        $where = " WHERE gid IN (" . $nggGalleryID . ")";
+	        $order = 'gid ASC';
+	         
+	        $gallery = $wpdb->get_row("SELECT * FROM {$wpdb->nggallery}" . $where . " ORDER BY " . $order . " LIMIT 0, 1 ");
+	         
+	        // let's get a random picture
+	        $pid = $wpdb->get_var("SELECT pid FROM {$wpdb->nggpictures} WHERE galleryid = '" . $nggGalleryID . "' ORDER BY RAND() LIMIT 1");
+	    
+	        // lets get the image data
+	        $imagerow = $wpdb->get_row("SELECT * FROM {$wpdb->nggpictures} WHERE pid = '" . $pid . "'");
+	        // lets combine the image and gallery data
+	        foreach ($gallery as $key => $value) {
+	            $imagerow->$key = $value;
+	        }
+	    
+	        // build image url
+	         
+	        $image_url = site_url("/") . $imagerow->path . "/" . $imagerow->filename;
+	         
+	        // build our image string
+	        $full_output = $full_output . "\n{image : '" . $image_url . "', title : '".$imagerow->description."'}";
+	        return $full_output;
+	    
+	         
+	    }
+	    else
+	    {
+	        return false;
+	    }
 	}
 	
 	public function getImagesFromDirectory( $directory_path ) {
