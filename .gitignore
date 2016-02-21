@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.settings/org.eclipse.php.core.prefs
+.buildpath
+.project
+.project.bak
+.settings/com.zend.php.remoteproject.core.prefs
